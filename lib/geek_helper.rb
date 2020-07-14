@@ -13,7 +13,7 @@ module GeekHelper
   end
 
   def baseURL
-    "http://localhost:3000/"
+    ""
   end
 
   def groupYearMonths
