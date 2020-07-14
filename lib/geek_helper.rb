@@ -13,7 +13,7 @@ module GeekHelper
   end
 
   def baseURL
-    ""
+    "https://vikytech.github.io/geeknight/"
   end
 
   def groupYearMonths
