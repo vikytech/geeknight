@@ -1,7 +1,7 @@
 .agenda {
 	&-heading {
-		height: 90px;
-		line-height: 90px;
+		height: 70px;
+		line-height: 70px;
 		text-align: center;
 		background-color: $section-heading-background;
 
@@ -19,8 +19,6 @@
 
 		.speakers {
 			margin: 0px auto;
-			min-width: 1024px;
-			width: 1024px;
 
 			.speaker-details {
 				display: flex;
