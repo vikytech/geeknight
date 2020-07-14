@@ -13,7 +13,7 @@ module GeekHelper
   end
 
   def baseURL
-    "https://chennai.geeknight.in/"
+    "http://localhost:3000/"
   end
 
   def groupYearMonths

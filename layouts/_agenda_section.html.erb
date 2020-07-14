@@ -16,10 +16,7 @@
                 <% else %>
                   <span class="title"><%= agenda[:title] %></span>
                 <% end%>
-
-                <% if agenda[:subtitle] %>
-                    <div class="subtitle"><%= agenda[:subtitle] %></div>
-                <% end %>                
+                
                 <% agenda[:speakers].each_with_index do |speaker, i| %>
                     <span class="name">
                       <% if speaker[:image] %>
@@ -45,18 +42,6 @@
                 <% else %>
                   <span class="title-default"><%= agenda[:title] %></span>
                 <% end%>
-
-                <% if agenda[:subtitle] %>
-                    <span class="subtitle"><%= agenda[:subtitle] %></span>
-                <% end %>
-              <% end %>
-              <% if agenda[:resources] %>
-                  <p><small>Resources:
-                  <% agenda[:resources].each_with_index do |resource, i| %>
-                      <a href="<%= resource[:url] %>" rel="nofollow" target="_blank" class="link"><%= resource[:title] %></a>
-                      <%= ' &bull; ' if i != agenda[:resources].length - 1 %>
-                  <% end %>
-                  </small></p>
               <% end %>
             </div>
           </div>
