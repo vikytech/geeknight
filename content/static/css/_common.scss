@@ -1,20 +1,8 @@
-html {
-	width: 100%;
-	height: 100%;
-	max-width: 924px;
-	overflow: auto;
-	font-family: 'OpenSans', sans-serif;
-	@media #{$mobile} {
-		min-width: 300px;
-	}
-
-	body {
+section {
+		font-family: 'OpenSans', sans-serif;
 		position: relative;
 		margin: auto;
 		max-width: 924px;
-		@media #{$mobile} {
-			min-width: 300px;
-		}
 
 		a {
 			color: $pink;
@@ -22,28 +10,6 @@ html {
 		}
 	}
 
-	.read-more {
-		font-size: .7em;
-		color: $pink;
-	}
-
-	.read-more::after {
-		content: 'Show More';
-		cursor: pointer;
-		text-decoration: underline;
-		font-weight: 700;
-	}
-
-	.toggle:checked ~ label::after {
-		content: 'Show Less';
-	}
-
-	.toggle {
-		display: none;
-		visibility: hidden;
-	}
-
 	.link {
 		text-decoration: underline;
 	}
-}
