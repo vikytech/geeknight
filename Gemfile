@@ -5,6 +5,8 @@ gem 'bourbon'
 gem 'nanoc'
 gem 'multi_json'
 gem 'activesupport', require: 'active_support/all'
+gem 'premailer'
+gem 'nokogiri'
 
 gem 'guard-nanoc'
 gem 'terminal-notifier-guard'

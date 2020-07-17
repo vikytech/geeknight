@@ -1,3 +1,5 @@
+require "premailer"
+
 module GeekHelper
   def start_date(item=nil)
     item ||= @item
@@ -14,6 +16,17 @@ module GeekHelper
 
   def baseURL
     "https://vikytech.github.io/geeknight/"
+  end
+
+  def generate_html_with_inline_css
+    print("Generating mail content...\n")
+
+    premailer = Premailer.new('docs/index.html', :warn_level => Premailer::Warnings::SAFE)
+    File.open("docs/index.html", "w") do |fout|
+      fout.puts premailer.to_inline_css
+    end
+
+    print("Ready to send")
   end
 
   def groupYearMonths

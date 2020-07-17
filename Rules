@@ -51,3 +51,7 @@ route '/static/**/*' do
 end
 
 layout '/*', :erb
+
+postprocess do
+  generate_html_with_inline_css
+end
