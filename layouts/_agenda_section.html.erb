@@ -11,12 +11,6 @@
             </span>
             <div class="speaker-detail">
               <% if agenda[:speakers] %>
-                <% if agenda[:video_link] %>
-                  <span class="title"><a href="<%= agenda[:video_link] %>" target="_blank" class="link"><%= agenda[:title] %></a></span>
-                <% else %>
-                  <span class="title"><%= agenda[:title] %></span>
-                <% end%>
-                
                 <% agenda[:speakers].each_with_index do |speaker, i| %>
                     <span class="name">
                       <% if speaker[:image] %>
@@ -31,19 +25,21 @@
                             <%= speaker[:name] %>
                         <% end %>
                         <% if speaker[:description] %>
-                        <div class="speaker-description"><%= speaker[:description] %></div>
+                          <div class="speaker-description"><%= speaker[:description] %></div>
+                        <% end %>
+                        <% if speaker[:motivation] %>
+                          <div class="speaker-description"><%= speaker[:motivation] %></div>
                         <% end %>
                       </div>
                     </span>
                 <% end %>
-              <% else %>
-                <% if agenda[:video_link] %>
-                  <span class="title-default"><a href="<%= agenda[:video_link] %>" target="_blank" class="link"><%= agenda[:title] %></a></span>
-                <% else %>
-                  <span class="title-default"><%= agenda[:title] %></span>
-                <% end%>
               <% end %>
             </div>
+            <% if agenda[:video_link] %>
+               <iframe width="560" height="315" src="<%= agenda[:video_link] %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <% else %>
+               <span class="title-default"><%= agenda[:title] %></span>
+            <% end %>
           </div>
         <% end %>
       </div>

@@ -1,0 +1,23 @@
+<section id="agenda" class="agenda">
+    <div class="agenda-heading">
+        <span class="agenda-heading-text"> Special thanks to the organizers </span>
+    </div>        
+    <div class="content">
+      <div class="speakers">
+        <% @item[:organizers] && @item[:organizers].each_with_index do |organizer, i| %>
+          <div class="organizer-detail">
+            <span class="name">
+              <% if organizer[:image] %>
+                <img class="img" src="<%= baseURL + "img/speaker/" + organizer[:image] %>" alt="<%= organizer[:name] %>" />
+              <% else %>
+                <img class="img" src="<%= baseURL + "img/speaker/no_user_image.svg" %>" alt="<%= organizer[:name] %>" />
+              <% end %>
+            </span>
+            <% if organizer[:name] %>
+              <%= organizer[:name] %>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+</section>
