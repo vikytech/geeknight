@@ -15,7 +15,6 @@
 	}
 
 	.content {
-		margin: 0 0 50px 0;
 
 		.speakers {
 			margin: 0px auto;
@@ -23,7 +22,6 @@
 			.speaker-details {
 				display: flex;
 				flex-flow: row wrap;
-				align-items: center;
 				border-bottom: 1px solid $black;
 				padding: 20px 30px;
 

@@ -12,6 +12,7 @@
             <div class="speaker-detail">
               <% if agenda[:speakers] %>
                 <% agenda[:speakers].each_with_index do |speaker, i| %>
+                    <span class="title"><%= agenda[:title] %></span>
                     <span class="name">
                       <% if speaker[:image] %>
                         <img class="img" src="<%= baseURL + "img/speakers/" + speaker[:image] %>" alt="<%= speaker[:name] %>" />
@@ -32,14 +33,12 @@
                         <% end %>
                       </div>
                     </span>
+                    <% if agenda[:video_link] %>
+                      <iframe width="100%" height="400px" src="<%= agenda[:video_link] %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <% end %>
                 <% end %>
               <% end %>
             </div>
-            <% if agenda[:video_link] %>
-               <iframe width="560" height="315" src="<%= agenda[:video_link] %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <% else %>
-               <span class="title-default"><%= agenda[:title] %></span>
-            <% end %>
           </div>
         <% end %>
       </div>
