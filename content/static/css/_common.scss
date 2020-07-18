@@ -2,6 +2,8 @@ section {
 		font-family: 'OpenSans', sans-serif;
 		position: relative;
 		margin: auto;
+		min-width: 400px;
+		max-width: 640px;
 
 		a {
 			color: $pink;

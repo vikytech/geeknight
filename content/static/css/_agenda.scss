@@ -1,12 +1,12 @@
 .agenda {
 	&-heading {
-		height: 70px;
-		line-height: 70px;
+		height: 50px;
+		line-height: 50px;
 		text-align: center;
 		background-color: $section-heading-background;
 
 		&-text {
-			font-size: 36px;
+			font-size: 24px;
 			font-weight: 800;
 			color: $black;
 			text-transform: uppercase;
@@ -30,11 +30,14 @@
 					padding-top: 5px;
 					font-weight: 800;
 					text-transform: uppercase;
-					align-self: center;
+					align-self: flex-start;
 				}
 
-				.speaker-detail, .workshop-detail {
-					flex: 1 1 80%;
+				.speaker-detail {
+					flex: 1 0 80%;
+					display: flex;
+					flex-flow: column;
+					align-items: flex-start;
 
 					.img {
 						border-radius: 20px;
@@ -48,7 +51,7 @@
 						color: $pink;
 						font-size: 20px;
 						font-weight: bold;
-						display: block;
+						flex: 1 1 auto;
 					}
 
 					.title-default {
@@ -79,6 +82,7 @@
 						display: flex;
 						align-items: center;
 						justify-content: flex-start;
+						flex: 1 0 30%;
 												
 						.speaker-description {
 							font-size: 12px;
@@ -88,9 +92,20 @@
 							line-height: 1.5;
 						}
 
+						
 						.profile {
 							width: 95%;
 						}
+					}
+					.motivation {
+						font-size: 15px;
+						font-weight: bold;
+						flex: 1 0 10%;
+					}
+
+					.live {
+						height: 300px;
+						width: 100%;
 					}
 				}
 			}

@@ -1,12 +1,11 @@
 <section id="intro" class="intro">
     <div class="banner">
         <div class="banner-overlay">
-            <div class="mask"><div class="blur"></div></div>
             <div class="intro-info">
                 <div class="intro-info-place">
-                    <div class="intro-info-place-title">CHENNAI</div>
-                    <div class="line"></div>
+                    <a href="<%= @item[:website_link] %>"><div class="intro-info-place-title">Geek Night - CHENNAI</div></a>
                 </div>
+                <div class="line"></div>
                 <div class="intro-info-edition"><%= @item[:edition] %><sup><%= @item[:edition].ordinal %></sup> Edition <%= @item[:isWebinar] ? '(Webinar)' : '' %> </p></div>
                 <div class="intro-info-date">
                     <%= start_date.strftime("%b").upcase %><%= start_date.strftime(" %-d") %><sup><%= start_date.strftime("%-d").to_i.ordinal %></sup><%= start_date.strftime(", %Y") %>
@@ -16,13 +15,23 @@
                 <% end %>
                 <div class="intro-info-buttons">
                     <div class="intro-info-buttons-button">
-                      <a href="<%= @item[:websiteLink] %>">
-                        <div class="intro-info-buttons-button-text"> Geeknight Chennai </div>
-                      </a>
-                      <div class="intro-info-buttons-button-sub-text">
-                          Visit our website for more information
-                        <br/>
+                      <% if item[:participate] %>
+                            <a href="<%= @item[:participate] %>" target="_blank" rel="nofollow"
+                           onclick="ga('send', 'event', 'participate', 'participate')">
+                            <div class="intro-info-buttons-button-text">PARTICIPATE</div>
+                            </a>
+                            <div class="intro-info-buttons-button-sub-text">
+                                to learn exciting new stuff <br/>
+                            </div>
+                        <% else %>
+                            <div class="intro-info-buttons-button-text"><strike>PARTICIPATE</strike></div>
+                            <% if start_date.future? %>
+                                <div class="intro-info-buttons-button-sub-text">Registrations not yet open</div>
+                            <% else %>
+                                <div class="intro-info-buttons-button-sub-text">Sorry! registrations closed</div>
+                            <% end %>
                        </div>
+                        <% end %>
                     </div>
                     <div class="intro-info-buttons-button">                        
                         <% if item[:talk] %>
