@@ -132,10 +132,11 @@ section {
       .agenda .content .speakers .speaker-details .speaker-detail, .agenda .content .speakers .speaker-details .workshop-detail {
         flex: 1 1 80%; }
         .agenda .content .speakers .speaker-details .speaker-detail .img, .agenda .content .speakers .speaker-details .workshop-detail .img {
-          border-radius: 32px;
-          width: 40px;
-          height: 40px;
-          margin: 5px 5px 5px 0; }
+          border-radius: 20px;
+          width: 80px;
+          height: 80px;
+          margin: 5px 5px 5px 0;
+          flex: 1 1 10%; }
         .agenda .content .speakers .speaker-details .speaker-detail .title, .agenda .content .speakers .speaker-details .workshop-detail .title {
           color: #ef5ba1;
           font-size: 20px;
@@ -171,3 +172,34 @@ section {
             line-height: 1.5; }
           .agenda .content .speakers .speaker-details .speaker-detail .name .profile, .agenda .content .speakers .speaker-details .workshop-detail .name .profile {
             width: 95%; }
+
+.gratitude-heading {
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+  background-color: #6a2569; }
+  .gratitude-heading-text {
+    font-size: 36px;
+    font-weight: 800;
+    color: #000;
+    text-transform: uppercase;
+    color: #fff; }
+.gratitude .content {
+  margin: 0 0 50px 0; }
+  .gratitude .content .organizers {
+    margin: 0px auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly; }
+    .gratitude .content .organizers .name {
+      font-size: 15px;
+      font-weight: bold;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      padding: 10px 2rem; }
+    .gratitude .content .organizers .img {
+      border-radius: 10px;
+      width: 80px;
+      height: 80px;
+      margin: 5px 5px 5px 0; }
